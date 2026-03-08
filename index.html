@@ -51,8 +51,8 @@
     <div class="max-w-6xl mx-auto">
         <header class="mb-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <div>
-                <h1 class="text-2xl font-light tracking-tight">Editor de Audio</h1>
-                <p class="text-slate-400 text-sm">Procesamiento de señal avanzado</p>
+                <h1 class="text-2xl font-light tracking-tight">Editor De Audio</h1>
+                <p class="text-slate-400 text-sm">Procesamiento De Señal Avanzado (Stereo Support)</p>
             </div>
             <div class="flex gap-3">
                 <button id="recordBtn" onclick="toggleRecording()" class="bg-red-600 hover:bg-red-500 px-6 py-2 rounded-full text-sm font-medium transition-all flex items-center gap-2">
@@ -61,7 +61,7 @@
                 </button>
                 <input type="file" id="audioInput" accept="audio/*" class="hidden">
                 <button onclick="document.getElementById('audioInput').click()" class="bg-blue-600 hover:bg-blue-500 px-6 py-2 rounded-full text-sm font-medium transition-colors">
-                    Cargar archivo
+                    Cargar Archivo
                 </button>
                 <button id="exportBtn" disabled onclick="exportAudio()" class="bg-emerald-600 disabled:opacity-30 px-6 py-2 rounded-full text-sm font-medium">
                     Exportar
@@ -110,10 +110,10 @@
                 <div>
                     <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-400 mb-4">Herramientas</h3>
                     <div class="grid grid-cols-1 gap-2">
-                        <button id="trimBtn" disabled onclick="trimAudio()" class="text-left px-4 py-2 rounded bg-slate-700 hover:bg-slate-600 text-sm disabled:opacity-30">Recortar selección</button>
+                        <button id="trimBtn" disabled onclick="trimAudio()" class="text-left px-4 py-2 rounded bg-slate-700 hover:bg-slate-600 text-sm disabled:opacity-30">Recortar Selección</button>
                         <button id="normalizeBtn" disabled onclick="normalizeAudio()" class="text-left px-4 py-2 rounded bg-slate-700 hover:bg-slate-600 text-sm disabled:opacity-30">Normalizar</button>
                         <button id="reverseBtn" disabled onclick="reverseAudio()" class="text-left px-4 py-2 rounded bg-slate-700 hover:bg-slate-600 text-sm disabled:opacity-30">Invertir (Reverse)</button>
-                        <button id="muteBtn" disabled onclick="muteSelection()" class="text-left px-4 py-2 rounded bg-slate-700 hover:bg-slate-600 text-sm disabled:opacity-30">Silenciar selección</button>
+                        <button id="muteBtn" disabled onclick="muteSelection()" class="text-left px-4 py-2 rounded bg-slate-700 hover:bg-slate-600 text-sm disabled:opacity-30">Silenciar Selección</button>
                         <button id="echoModalBtn" disabled onclick="openModal('echoModal')" class="text-left px-4 py-2 rounded bg-slate-700 hover:bg-slate-600 text-sm disabled:opacity-30">Eco</button>
                         <button id="reverbSimpleModalBtn" disabled onclick="openModal('reverbSimpleModal')" class="text-left px-4 py-2 rounded bg-indigo-700/50 hover:bg-indigo-600/50 text-sm disabled:opacity-30 border border-indigo-500/30">Reverberación</button>
                         <button id="reverbModalBtn" disabled onclick="openModal('reverbModal')" class="text-left px-4 py-2 rounded bg-blue-700/50 hover:bg-blue-600/50 text-sm disabled:opacity-30 border border-blue-500/30">Reverberación Convolutiva</button>
@@ -145,7 +145,7 @@
                         <input type="range" id="echoMix" min="0" max="1" step="0.01" value="0.4" class="slider-custom w-full">
                     </div>
                     <div class="flex gap-2">
-                        <button onclick="previewEcho()" class="flex-1 bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-medium">Vista previa</button>
+                        <button onclick="previewEcho()" class="flex-1 bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-medium">Vista Previa</button>
                         <button onclick="applyEffect('echo')" class="flex-[2] bg-blue-600 hover:bg-blue-500 py-3 rounded-xl font-medium">Aplicar</button>
                     </div>
                 </div>
@@ -174,7 +174,7 @@
                         <input type="range" id="reverbSimpleMix" min="0" max="1" step="0.01" value="0.5" class="slider-custom w-full">
                     </div>
                     <div class="flex gap-2">
-                        <button onclick="previewAlgorithmicReverb()" class="flex-1 bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-medium">Vista previa</button>
+                        <button onclick="previewAlgorithmicReverb()" class="flex-1 bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-medium">Vista Previa</button>
                         <button onclick="applyEffect('reverb')" class="flex-[2] bg-indigo-600 hover:bg-indigo-500 py-3 rounded-xl font-medium">Aplicar</button>
                     </div>
                 </div>
@@ -190,14 +190,14 @@
                 <div class="space-y-4">
                     <div class="border-2 border-dashed border-slate-600 rounded-lg p-8 text-center hover:border-blue-500 cursor-pointer" onclick="document.getElementById('irInput').click()">
                         <input type="file" id="irInput" accept="audio/*" class="hidden">
-                        <span id="irFileName" class="text-sm text-slate-400">Seleccionar archivo IR (.wav)</span>
+                        <span id="irFileName" class="text-sm text-slate-400">Seleccionar Archivo IR (MP3, WAV, Etc.)</span>
                     </div>
                     <div class="flex items-center justify-between gap-4">
                         <label class="text-xs text-slate-400 uppercase">Mezcla</label>
                         <input type="range" id="reverbMix" min="0" max="1" step="0.1" value="0.5" class="slider-custom flex-grow">
                     </div>
                     <div class="flex gap-2">
-                        <button id="previewConvBtn" disabled onclick="previewConvolutionReverb()" class="flex-1 bg-slate-700 hover:bg-slate-600 disabled:opacity-30 py-3 rounded-xl font-medium">Vista previa</button>
+                        <button id="previewConvBtn" disabled onclick="previewConvolutionReverb()" class="flex-1 bg-slate-700 hover:bg-slate-600 disabled:opacity-30 py-3 rounded-xl font-medium">Vista Previa</button>
                         <button id="applyReverbBtn" disabled onclick="applyEffect('convolution')" class="flex-[2] bg-blue-600 hover:bg-blue-500 disabled:opacity-30 py-3 rounded-xl font-medium">Aplicar</button>
                     </div>
                 </div>
@@ -216,7 +216,6 @@
         let history = [], historyIndex = -1;
         let selection = { start: null, end: null };
 
-        // Variables para grabación
         let mediaRecorder = null;
         let audioChunks = [];
         let isRecording = false;
@@ -260,37 +259,29 @@
                     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
                     mediaRecorder = new MediaRecorder(stream);
                     audioChunks = [];
-
-                    mediaRecorder.ondataavailable = (event) => {
-                        audioChunks.push(event.data);
-                    };
-
+                    mediaRecorder.ondataavailable = (event) => audioChunks.push(event.data);
                     mediaRecorder.onstop = async () => {
                         const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
                         const arrayBuffer = await audioBlob.arrayBuffer();
                         const decodedBuffer = await audioCtx.decodeAudioData(arrayBuffer);
-                        
                         audioBuffer = decodedBuffer;
                         history = []; historyIndex = -1;
                         saveState();
                         resetEditorState();
                         document.querySelectorAll('button').forEach(b => b.disabled = false);
-                        showStatus("Grabación cargada");
+                        showStatus("Grabación Cargada");
                     };
-
                     mediaRecorder.start();
                     isRecording = true;
                     updateRecordingUI(true);
                     showStatus("Grabando...");
                 } catch (err) {
-                    console.error("Error al acceder al micrófono:", err);
-                    showStatus("Error al acceder al micrófono");
+                    showStatus("Error Al Acceder Al Micrófono");
                 }
             } else {
                 mediaRecorder.stop();
                 isRecording = false;
                 updateRecordingUI(false);
-                showStatus("Grabación finalizada");
             }
         }
 
@@ -300,12 +291,12 @@
             const text = document.getElementById('recordText');
             if (recording) {
                 btn.classList.add('bg-slate-900');
-                btn.classList.remove('bg-red-600', 'hover:bg-red-500');
+                btn.classList.remove('bg-red-600');
                 dot.classList.add('recording-pulse', 'bg-red-500');
                 text.innerText = "Detener";
             } else {
                 btn.classList.remove('bg-slate-900');
-                btn.classList.add('bg-red-600', 'hover:bg-red-500');
+                btn.classList.add('bg-red-600');
                 dot.classList.remove('recording-pulse', 'bg-red-500');
                 dot.classList.add('bg-white');
                 text.innerText = "Grabar";
@@ -427,23 +418,24 @@
             wetGain.gain.value = mix;
             delay.delayTime.value = delayTime;
             feedback.gain.value = 0.4;
-            source.connect(dryGain);
-            dryGain.connect(dest);
-            source.connect(delay);
-            delay.connect(feedback);
-            feedback.connect(delay);
-            delay.connect(wetGain);
-            wetGain.connect(dest);
+            source.connect(dryGain); dryGain.connect(dest);
+            source.connect(delay); delay.connect(feedback); feedback.connect(delay);
+            delay.connect(wetGain); wetGain.connect(dest);
         }
 
         function buildAlgorithmicChain(context, source, dest, decay, mix) {
             const dryGain = context.createGain();
             const wetGain = context.createGain();
+            const outputLimiter = context.createGain();
+            
             dryGain.gain.value = 1.0 - mix;
             wetGain.gain.value = mix;
+            outputLimiter.gain.value = 0.35; 
+
             const combTimes = [0.0151, 0.0183, 0.0211, 0.0237, 0.0271, 0.0293];
             const combMerger = context.createGain();
-            combMerger.gain.value = 0.45;
+            combMerger.gain.value = 1 / combTimes.length;
+
             combTimes.forEach((t, idx) => {
                 const delay = context.createDelay();
                 delay.delayTime.value = t;
@@ -451,23 +443,26 @@
                 feedback.gain.value = Math.pow(10, -3 * t / decay);
                 const filter = context.createBiquadFilter();
                 filter.type = "lowpass";
-                filter.frequency.value = 16000 - (idx * 2500); 
+                filter.frequency.value = 12000 - (idx * 1500);
+                
                 source.connect(filter);
                 filter.connect(delay);
                 delay.connect(feedback);
                 feedback.connect(delay);
                 feedback.connect(combMerger);
             });
-            const ap1 = context.createBiquadFilter();
-            ap1.type = "allpass"; ap1.frequency.value = 450;
-            const ap2 = context.createBiquadFilter();
-            ap2.type = "allpass"; ap2.frequency.value = 1600;
+
+            const ap1 = context.createBiquadFilter(); ap1.type = "allpass"; ap1.frequency.value = 450;
+            const ap2 = context.createBiquadFilter(); ap2.type = "allpass"; ap2.frequency.value = 1600;
+            
             combMerger.connect(ap1);
             ap1.connect(ap2);
             ap2.connect(wetGain);
+            
             source.connect(dryGain);
             dryGain.connect(dest);
-            wetGain.connect(dest);
+            wetGain.connect(outputLimiter);
+            outputLimiter.connect(dest);
         }
 
         async function applyEffect(type) {
@@ -476,80 +471,95 @@
             const { start, end } = getSelectionSamples();
             const length = end - start;
             if (length <= 0) return;
+
             const selectionBuffer = audioCtx.createBuffer(audioBuffer.numberOfChannels, length, audioBuffer.sampleRate);
             for (let i = 0; i < audioBuffer.numberOfChannels; i++) {
                 selectionBuffer.copyToChannel(audioBuffer.getChannelData(i).slice(start, end), i);
             }
-            const tailSeconds = type === 'echo' ? 3 : (type.includes('reverb') ? 10 : 0);
+
+            // Calculamos tailSeconds dinámicamente según el efecto
+            let tailSeconds = 0;
+            if (type === 'echo') {
+                tailSeconds = parseFloat(document.getElementById('echoDelay').value) * 5;
+            } else if (type === 'reverb') {
+                tailSeconds = parseFloat(document.getElementById('reverbDecay').value);
+            } else if (type === 'convolution' && irBuffer) {
+                tailSeconds = irBuffer.duration;
+            }
+
             const offline = new OfflineAudioContext(audioBuffer.numberOfChannels, length + (audioBuffer.sampleRate * tailSeconds), audioBuffer.sampleRate);
             const source = offline.createBufferSource();
             source.buffer = selectionBuffer;
+
             if (type === 'echo') {
-                const delay = parseFloat(document.getElementById('echoDelay').value);
-                const mix = parseFloat(document.getElementById('echoMix').value);
-                buildEchoChain(offline, source, offline.destination, delay, mix);
+                buildEchoChain(offline, source, offline.destination, parseFloat(document.getElementById('echoDelay').value), parseFloat(document.getElementById('echoMix').value));
                 closeModal('echoModal');
             } else if (type === 'reverb') {
-                const decay = parseFloat(document.getElementById('reverbDecay').value);
-                const mix = parseFloat(document.getElementById('reverbSimpleMix').value);
-                buildAlgorithmicChain(offline, source, offline.destination, decay, mix);
+                buildAlgorithmicChain(offline, source, offline.destination, parseFloat(document.getElementById('reverbDecay').value), parseFloat(document.getElementById('reverbSimpleMix').value));
                 closeModal('reverbSimpleModal');
             } else if (type === 'convolution') {
                 const mix = parseFloat(document.getElementById('reverbMix').value);
                 const conv = offline.createConvolver();
                 conv.buffer = irBuffer;
+                conv.channelCount = audioBuffer.numberOfChannels;
+                conv.channelInterpretation = 'speakers';
                 const dry = offline.createGain(); dry.gain.value = 1 - mix;
                 const wet = offline.createGain(); wet.gain.value = mix;
                 source.connect(dry); dry.connect(offline.destination);
                 source.connect(conv); conv.connect(wet); wet.connect(offline.destination);
                 closeModal('reverbModal');
             }
+            
             source.start();
             const renderedPart = await offline.startRendering();
-            const newTotalLength = audioBuffer.length - length + renderedPart.length;
+
+            const newTotalLength = start + renderedPart.length + (audioBuffer.length - end);
             const finalBuffer = audioCtx.createBuffer(audioBuffer.numberOfChannels, newTotalLength, audioBuffer.sampleRate);
+            
             for (let i = 0; i < audioBuffer.numberOfChannels; i++) {
-                const original = audioBuffer.getChannelData(i);
-                const processed = renderedPart.getChannelData(i);
-                const output = finalBuffer.getChannelData(i);
-                output.set(original.slice(0, start), 0);
-                output.set(processed, start);
-                output.set(original.slice(end), start + processed.length);
+                const originalChannelData = audioBuffer.getChannelData(i);
+                const renderedChannelData = renderedPart.getChannelData(i);
+                const finalChannelData = finalBuffer.getChannelData(i);
+                
+                finalChannelData.set(originalChannelData.subarray(0, start), 0);
+                finalChannelData.set(renderedChannelData, start);
+                finalChannelData.set(originalChannelData.subarray(end), start + renderedChannelData.length);
             }
+
             audioBuffer = finalBuffer;
-            saveState();
+            saveState(); 
             resetEditorState();
         }
 
         async function previewEcho() {
             stopPreview();
             const { start, end } = getSelectionSamples();
-            const delay = parseFloat(document.getElementById('echoDelay').value);
-            const mix = parseFloat(document.getElementById('echoMix').value);
             previewNode = audioCtx.createBufferSource();
             previewNode.buffer = audioBuffer;
-            buildEchoChain(audioCtx, previewNode, audioCtx.destination, delay, mix);
+            buildEchoChain(audioCtx, previewNode, audioCtx.destination, parseFloat(document.getElementById('echoDelay').value), parseFloat(document.getElementById('echoMix').value));
             previewNode.start(0, start / audioBuffer.sampleRate, (end - start) / audioBuffer.sampleRate);
         }
 
         async function previewAlgorithmicReverb() {
             stopPreview();
             const { start, end } = getSelectionSamples();
-            const decay = parseFloat(document.getElementById('reverbDecay').value);
-            const mix = parseFloat(document.getElementById('reverbSimpleMix').value);
             previewNode = audioCtx.createBufferSource();
             previewNode.buffer = audioBuffer;
-            buildAlgorithmicChain(audioCtx, previewNode, audioCtx.destination, decay, mix);
+            buildAlgorithmicChain(audioCtx, previewNode, audioCtx.destination, parseFloat(document.getElementById('reverbDecay').value), parseFloat(document.getElementById('reverbSimpleMix').value));
             previewNode.start(0, start / audioBuffer.sampleRate, (end - start) / audioBuffer.sampleRate);
         }
 
         async function previewConvolutionReverb() {
             stopPreview();
+            if (!irBuffer) return;
             const { start, end } = getSelectionSamples();
             const mix = parseFloat(document.getElementById('reverbMix').value);
             previewNode = audioCtx.createBufferSource();
             previewNode.buffer = audioBuffer;
-            const conv = audioCtx.createConvolver(); conv.buffer = irBuffer;
+            const conv = audioCtx.createConvolver(); 
+            conv.buffer = irBuffer;
+            conv.channelCount = audioBuffer.numberOfChannels;
+            conv.channelInterpretation = 'speakers';
             const dry = audioCtx.createGain(); dry.gain.value = 1 - mix;
             const wet = audioCtx.createGain(); wet.gain.value = mix;
             previewNode.connect(dry); dry.connect(audioCtx.destination);
@@ -564,27 +574,28 @@
             if (start === end) return;
             saveState();
             const nb = audioCtx.createBuffer(audioBuffer.numberOfChannels, end - start, audioBuffer.sampleRate);
-            for (let i = 0; i < audioBuffer.numberOfChannels; i++) {
-                nb.copyToChannel(audioBuffer.getChannelData(i).slice(start, end), i);
-            }
-            audioBuffer = nb;
-            resetEditorState();
-            showStatus("Recortado");
+            for (let i = 0; i < audioBuffer.numberOfChannels; i++) nb.copyToChannel(audioBuffer.getChannelData(i).slice(start, end), i);
+            audioBuffer = nb; resetEditorState();
         }
 
         function normalizeAudio() {
             stopPlayback();
             const { start, end } = getSelectionSamples();
             saveState();
+            let maxPeak = 0;
             for (let i = 0; i < audioBuffer.numberOfChannels; i++) {
                 const d = audioBuffer.getChannelData(i);
-                let m = 0;
-                for (let j = start; j < end; j++) if (Math.abs(d[j]) > m) m = Math.abs(d[j]);
-                const f = m > 0 ? 0.98 / m : 1;
-                for (let j = start; j < end; j++) d[j] *= f;
+                for (let j = start; j < end; j++) {
+                    const absVal = Math.abs(d[j]);
+                    if (absVal > maxPeak) maxPeak = absVal;
+                }
+            }
+            const factor = maxPeak > 0 ? 0.98 / maxPeak : 1;
+            for (let i = 0; i < audioBuffer.numberOfChannels; i++) {
+                const d = audioBuffer.getChannelData(i);
+                for (let j = start; j < end; j++) d[j] *= factor;
             }
             drawWaveform();
-            showStatus("Normalizado");
         }
 
         function reverseAudio() {
@@ -593,11 +604,9 @@
             saveState();
             for (let i = 0; i < audioBuffer.numberOfChannels; i++) {
                 const data = audioBuffer.getChannelData(i);
-                const sub = data.slice(start, end).reverse();
-                data.set(sub, start);
+                data.set(data.slice(start, end).reverse(), start);
             }
             drawWaveform();
-            showStatus("Invertido");
         }
 
         function muteSelection() {
@@ -610,7 +619,6 @@
                 for (let j = start; j < end; j++) d[j] = 0;
             }
             drawWaveform();
-            showStatus("Silenciado");
         }
 
         function togglePlayback() {
@@ -637,10 +645,7 @@
             if (!isPlaying) return;
             const currentPos = startOffset + (audioCtx.currentTime - startTime);
             if (currentPos >= audioBuffer.duration) {
-                isPlaying = false;
-                startOffset = 0; 
-                cursor.style.left = "0%";
-                document.getElementById('currentTime').innerText = "0.0s";
+                isPlaying = false; startOffset = 0; cursor.style.left = "0%";
                 document.getElementById('playIcon').classList.remove('hidden');
                 document.getElementById('pauseIcon').classList.add('hidden');
                 return;
@@ -651,10 +656,8 @@
         }
 
         function resetEditorState() {
-            startOffset = 0;
-            selection = { start: null, end: null };
-            overlay.style.display = 'none';
-            cursor.style.left = "0%";
+            startOffset = 0; selection = { start: null, end: null };
+            overlay.style.display = 'none'; cursor.style.left = "0%";
             document.getElementById('currentTime').innerText = "0.0s";
             drawWaveform();
             document.getElementById('totalTime').innerText = (audioBuffer.duration).toFixed(1) + "s";
@@ -668,16 +671,12 @@
 
         function exportAudio() {
             if (!audioBuffer) return;
-            showStatus("Exportando...");
             const wavBuffer = bufferToWav(audioBuffer);
             const blob = new Blob([wavBuffer], { type: 'audio/wav' });
             const url = URL.createObjectURL(blob);
             const link = document.createElement('a');
-            link.href = url;
-            link.download = 'audio_editado.wav';
-            link.click();
+            link.href = url; link.download = 'audio_editado.wav'; link.click();
             URL.revokeObjectURL(url);
-            showStatus("Exportado con éxito");
         }
 
         function bufferToWav(abuffer) {
@@ -687,32 +686,18 @@
                   view = new DataView(buffer),
                   channels = [];
             let i, sample, offset = 0, pos = 0;
-
             function setUint16(data) { view.setUint16(pos, data, true); pos += 2; }
             function setUint32(data) { view.setUint32(pos, data, true); pos += 4; }
-
-            setUint32(0x46464952); // "RIFF"
-            setUint32(length - 8);
-            setUint32(0x45564157); // "WAVE"
-            setUint32(0x20746d66); // "fmt "
-            setUint32(16);
-            setUint16(1); // PCM
-            setUint16(numOfChan);
-            setUint32(abuffer.sampleRate);
-            setUint32(abuffer.sampleRate * 2 * numOfChan);
-            setUint16(numOfChan * 2);
-            setUint16(16);
-            setUint32(0x61746164); // "data"
-            setUint32(length - pos - 4);
-
+            setUint32(0x46464952); setUint32(length - 8); setUint32(0x45564157);
+            setUint32(0x20746d66); setUint32(16); setUint16(1); setUint16(numOfChan);
+            setUint32(abuffer.sampleRate); setUint32(abuffer.sampleRate * 2 * numOfChan);
+            setUint16(numOfChan * 2); setUint16(16); setUint32(0x61746164); setUint32(length - pos - 4);
             for(i = 0; i < abuffer.numberOfChannels; i++) channels.push(abuffer.getChannelData(i));
-
             while(pos < length) {
                 for(i = 0; i < numOfChan; i++) {
                     sample = Math.max(-1, Math.min(1, channels[i][offset]));
                     sample = (sample < 0 ? sample * 0x8000 : sample * 0x7FFF);
-                    view.setInt16(pos, sample, true);
-                    pos += 2;
+                    view.setInt16(pos, sample, true); pos += 2;
                 }
                 offset++;
             }
@@ -722,11 +707,18 @@
         document.getElementById('irInput').onchange = async (e) => {
             const file = e.target.files[0];
             if (!file) return;
-            const arrayBuffer = await file.arrayBuffer();
-            irBuffer = await audioCtx.decodeAudioData(arrayBuffer);
-            document.getElementById('applyReverbBtn').disabled = false;
-            document.getElementById('previewConvBtn').disabled = false;
-            document.getElementById('irFileName').innerText = file.name;
+            showStatus("Cargando IR...");
+            try {
+                const arrayBuffer = await file.arrayBuffer();
+                irBuffer = await audioCtx.decodeAudioData(arrayBuffer);
+                document.getElementById('applyReverbBtn').disabled = false;
+                document.getElementById('previewConvBtn').disabled = false;
+                document.getElementById('irFileName').innerText = file.name;
+                showStatus("Impulso Cargado");
+            } catch (err) {
+                showStatus("Error Al Decodificar Audio");
+                console.error(err);
+            }
         };
 
         document.getElementById('reverbDecay').oninput = (e) => document.getElementById('decayVal').innerText = e.target.value + "s";
